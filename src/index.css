@@ -69,6 +69,10 @@ body {
   width: 400px;
 }
 
+.input-author {
+  padding-left: 0.5rem;
+}
+
 .input-category {
   padding: 10px;
 }
@@ -84,8 +88,10 @@ body {
 }
 
 .booklist-h3 {
-  color: #121212;
+  color: #333;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 10rem;
+  font-weight: 600;
 }
 
 .title-container {
@@ -96,7 +102,7 @@ body {
 .book-title {
   color: #121212;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 5px;
 }
 
