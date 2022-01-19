@@ -1,4 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'
+import { addBook } from '../../redux/books/books';
+
+const dispatch = useDispatch();
 
 const AddForm = () => (
   <form className="form">
