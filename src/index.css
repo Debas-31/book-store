@@ -83,12 +83,12 @@ body {
   cursor: pointer;
 }
 
-.booklist-h2 {
+.booklist-h3 {
   color: #121212;
   font-family: 'Montserrat', sans-serif;
 }
 
-.book-container {
+.title-container {
   display: flex;
   justify-content: space-between;
 }
@@ -96,7 +96,14 @@ body {
 .book-title {
   color: #121212;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.book-author {
+  color: #4386bf;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 14px;
 }
 
 .remove-btn {
@@ -105,7 +112,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* style for categories */
