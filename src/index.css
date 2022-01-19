@@ -69,6 +69,10 @@ body {
   width: 400px;
 }
 
+.input-author {
+  padding-left: 0.5rem;
+}
+
 .input-category {
   padding: 10px;
 }
@@ -83,12 +87,14 @@ body {
   cursor: pointer;
 }
 
-.booklist-h2 {
-  color: #121212;
+.booklist-h3 {
+  color: #333;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 10rem;
+  font-weight: 600;
 }
 
-.book-container {
+.title-container {
   display: flex;
   justify-content: space-between;
 }
@@ -97,6 +103,13 @@ body {
   color: #121212;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 20px;
+  margin-top: 5px;
+}
+
+.book-author {
+  color: #4386bf;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 14px;
 }
 
 .remove-btn {
@@ -105,7 +118,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   font-family: 'RobotoSlab', sans-serif;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* style for categories */
