@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../redux/books/books';
+import { addBookApi } from '../../redux/books/books';
 
 const AddForm = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const AddForm = () => {
       category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(addBookApi(newBook));
     setTitle('');
     setCategory('');
   };

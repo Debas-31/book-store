@@ -1,4 +1,4 @@
-import axios from "axios";
+import Axios from "axios";
 
 const ADD_BOOK = "bookStore/books/ADD_BOOK";
 const REMOVE_BOOK = "bookstore/books/REMOVE_BOOK";
