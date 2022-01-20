@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Math Magicians : Book-Store / Create and remove book
+## Math Magicians : Book-Store / Connect to API
 
 > Book-Store is a simple website that displays a list of books and adds and removes books from the list. To achieve this project, apply HTML, CSS, and JavaScript best practices using React and Redux.
 
@@ -12,8 +12,7 @@
 - CSS 
 - JavaScript 
 - React
-- Linters
-- Vscode
+- Redux
 
 
 ## Getting Started
