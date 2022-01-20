@@ -10,7 +10,7 @@ const BookItem = (props) => {
 
   const dispatch = useDispatch();
   const removeBookFromStore = () => {
-    dispatch(removeBookApi({ id }));
+    dispatch(removeBookApi(id));
   };
 
   return (
