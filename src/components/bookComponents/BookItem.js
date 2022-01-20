@@ -5,7 +5,7 @@ import { removeBook } from '../../redux/books/books';
 
 const BookItem = (props) => {
   const {
-    book: { id, title, author },
+    book: { id, title, category },
   } = props;
 
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const BookItem = (props) => {
         <h3 className="book-title">{title}</h3>
         <button className="remove-btn" type="button" onClick={removeBookFromStore}> Remove </button>
       </div>
-      <h3 className="book-author">{author}</h3>
+      <h3 className="book-author">{category}</h3>
     </div>
   );
 };
@@ -28,7 +28,7 @@ BookItem.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
-    author: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 
