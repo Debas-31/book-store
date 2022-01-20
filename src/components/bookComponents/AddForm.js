@@ -39,7 +39,7 @@ const AddForm = () => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
-      <select name="category"className="input-category">
+      <select name="category" className="input-category">
         <option value="action">Action</option>
         <option value="science">Novel</option>
         <option value="science">Science</option>
