@@ -1,8 +1,8 @@
-import Axios from "axios";
+import Axios from 'axios';
 
-const ADD_BOOK = "bookStore/books/ADD_BOOK";
-const REMOVE_BOOK = "bookstore/books/REMOVE_BOOK";
-const FETCH_BOOK = "bookStore/books/FETCH_BOOK";
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const FETCH_BOOK = 'bookStore/books/FETCH_BOOK';
 
 const initialState = [];
 
@@ -21,40 +21,25 @@ const fetchBook = (payload) => ({
   payload,
 });
 
-export const addBookApi = (formData) => async (dispatch) => {
-  try {
-    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books', formData);
-    dispatch(addBook(formData));
-  } catch (error) {
-    return error;
-  }
+export const addBookApi = (payload) => async (dispatch) => {
+  const { id, title, category } = payload;
+  const newBook = { item_id: id, title, category };
+  await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books', newBook);
+  dispatch(addBook(payload));
 };
 
 export const fetchBookApi = () => async (dispatch) => {
-  try {
-    const { data } = await Axios.get(
-      "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books"
-    );
-
-    const Books = Object.keys(data).map((key) => ({
-      ...data[key][0],
-      item_id: key,
-    }));
-
-    const payload = Object.values(Books);
-    dispatch(fetchBook(payload));
-  } catch (error) {
-    return error;
-  }
+  const books = await Axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books');
+  const mapBooks = Object.entries(books.data).map(([id, book]) => {
+    const { category, title } = book[0];
+    return { id, category, title };
+  });
+  dispatch(fetchBook(mapBooks));
 };
 
-export const removeBookApi = (payload) => async (dispatch) => {
-  try {
-    await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books/${payload}`);
-    dispatch(removeBook(payload));
-  } catch (error) {
-    return error;
-  }
+export const removeBookApi = (id) => async (dispatch) => {
+  await Axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books/${id}`);
+  dispatch(removeBook(id));
 };
 
 const reducer = (state = initialState, action) => {
