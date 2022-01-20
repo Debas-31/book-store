@@ -21,6 +21,15 @@ const fetchBook = (payload) => ({
   payload,
 });
 
+export const addBookApi = (formData) => async (dispatch) => {
+  try {
+    await Axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/iJXZXKD7CTcbkfL8vo5O/books', formData);
+    dispatch(addBook(formData));
+  } catch (error) {
+    return error;
+  }
+};
+
 export const fetchBookApi = () => async (dispatch) => {
   try {
     const { data } = await Axios.get(
