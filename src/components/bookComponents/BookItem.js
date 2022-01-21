@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBookApi } from '../../redux/books/books';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 const BookItem = (props) => {
   const {
