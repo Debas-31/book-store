@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import  { ImUser } from 'react-icons/all-files/im/ImUser';
+import { ImUser } from '@react-icons/all-files/im/ImUser';
 
 const Header = () => {
   const links = [

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookApi } from '../../redux/books/books';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { removeBookApi } from '../../redux/books/books';
 
 const BookItem = (props) => {
   const {
@@ -51,7 +51,7 @@ const BookItem = (props) => {
         <button type="button" className="update-progg-btn">Update Progress</button>
       </div>
     </div>
-    
+
   );
 };
 
