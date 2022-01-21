@@ -153,7 +153,7 @@ body {
   cursor: pointer;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 15px;
-  padding: 5px;
+  padding: 7px;
 }
 
 .progress-bar-c {
@@ -218,6 +218,21 @@ body {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px;
+}
+
+hr {
+  margin-top: 2rem;
+  opacity: 0.3;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  width: 3px;
+  height: 30px;
+  color: #888;
 }
 
 /* style for categories */

@@ -23,7 +23,9 @@ const BookItem = (props) => {
         <h3 className="book-author">{category}</h3>
         <div className="book-btns">
           <button className="remove-btn" type="button">Comments</button>
+          <hr className="vertical" />
           <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
+          <hr className="vertical" />
           <button className="remove-btn" type="button">Edit</button>
         </div>
       </div>
@@ -51,7 +53,6 @@ const BookItem = (props) => {
         <button type="button" className="update-progg-btn">Update Progress</button>
       </div>
     </div>
-
   );
 };
 
