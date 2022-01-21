@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBookApi } from '../../redux/books/books';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
 const BookItem = (props) => {
   const {
@@ -13,6 +14,8 @@ const BookItem = (props) => {
     dispatch(removeBookApi(id));
   };
 
+  const percentage = 60;
+
   return (
     <div className="book-container">
       <div className="title-container">
@@ -21,6 +24,7 @@ const BookItem = (props) => {
       </div>
       <h3 className="book-author">{category}</h3>
     </div>
+    
   );
 };
 
