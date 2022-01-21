@@ -15,7 +15,7 @@ const BookItem = (props) => {
     dispatch(removeBookApi(id));
   };
 
-  const percentage = 60;
+  const percentage = 78;
 
   return (
     <div className="book-container">
@@ -27,6 +27,29 @@ const BookItem = (props) => {
           <button className="remove-btn" type="button" onClick={removeBookFromStore}>Remove</button>
           <button className="remove-btn" type="button">Edit</button>
         </div>
+      </div>
+      <div className="progress-bar-c">
+        <CircularProgressbar
+          value={percentage}
+          styles={buildStyles({ pathColor: '#0EA5E9', marginRight: '10px' })}
+          className="progress-bar"
+        />
+        <div className="progress-value-c">
+          <p className="progress-percentage">
+            {percentage}
+            %
+          </p>
+          <p className="progress-completed">Completed</p>
+        </div>
+      </div>
+      <div className="update-progg-c">
+        <h2 className="chapter-h2">CURRENT CHAPTER</h2>
+        <h3 className="chapter-h3">
+          Chapter
+          {' '}
+          { `${Math.floor(Math.random() * 50)}`}
+        </h3>
+        <button type="button" className="update-progg-btn">Update Progress</button>
       </div>
     </div>
     
