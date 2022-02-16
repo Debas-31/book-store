@@ -12,7 +12,9 @@
 - CSS 
 - JavaScript 
 - React
-- Redux
+
+## Live Demo
+>[Click Here](https://book-store-here.netlify.app/)
 
 ## Getting Started
 
