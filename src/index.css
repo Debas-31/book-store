@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Roboto Slab'");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin: 50px 100px;
+  padding: 20px 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* style for header */
+
+.header {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.header-h1 {
+  color: #0290ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding-right: 4rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 0.725rem;
+}
+
+.nav-item {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #121212;
+}
+
+.user-icon-c {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  height: 2.2rem;
+  right: 15%;
+}
+
+.user-icon {
+  color: #0290ff;
+  font-size: 1.56rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* style for books */
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-radius: 0.25rem;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 1.56rem;
+  margin: 0.9rem 0;
+}
+
+.add-book-h2 {
+  color: #888;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-title {
+  padding: 10px;
+  width: 400px;
+}
+
+.input-author {
+  padding-left: 0.5rem;
+  width: 300px;
+}
+
+.input-category {
+  padding: 10px;
+}
+
+.add-book-btn {
+  width: 130px;
+  background-color: #0290ff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booklist-h3 {
+  color: #121212;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.book-title {
+  color: #121212;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+.book-author {
+  color: #4386bf;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  font-weight: 300;
+}
+
+.book-btns {
+  display: flex;
+}
+
+.remove-btn {
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 15px;
+  padding: 7px;
+}
+
+.progress-bar-c {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.progress-bar {
+  height: 70px;
+  width: 70px;
+}
+
+.progress-value-c {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.progress-percentage {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  color: #121212;
+  font-weight: 500;
+}
+
+.progress-completed {
+  font-family: 'Montserrat', sans-serif;
+  margin: 5px 0 0 0;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+.update-progg-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-h2 {
+  font-family: 'RobotoSlab', sans-serif;
+  color: #121212;
+  opacity: 0.5;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.chapter-h3 {
+  font-family: 'RobotoSlab', sans-serif;
+  color: #121212;
+  margin: 5px 0 15px 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.update-progg-btn {
+  width: 150px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+hr {
+  margin-top: 2rem;
+  opacity: 0.3;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  width: 3px;
+  height: 30px;
+  color: #888;
+}
+
+/* style for categories */
+
+.category-h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0290ff;
+  font-size: 20px;
+}
+
+/* tablet size screen */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-h1 {
+    max-width: 5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+  }
+}
+
+/* style for desktop */
+
+@media screen and (min-width: 1024px) {
+  .header-h1 {
+    padding-left: 4rem;
+  }
+
+  .top-container {
+    margin: 50px 80px;
+  }
+
+  .book-container {
+    flex-direction: row;
+    gap: 200px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+}
